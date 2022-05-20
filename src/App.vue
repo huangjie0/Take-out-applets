@@ -8,7 +8,6 @@
 
 export default {
   name: 'App',
-  
 }
 </script>
 
@@ -17,6 +16,6 @@ body{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: #f4f4f4;
+  background-color:#dbdbdb;
 }
 </style>
