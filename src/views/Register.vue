@@ -12,10 +12,11 @@
 import LoginTop from '@/components/common/LoginTop'
 import LoginText from '@/components/common/LoginText.vue'
 import LoginBtn from '@/components/common/LoginBtn.vue'
+
 export default {
     name:'Register',
     components:{
-      LoginTop,
+      LoginTop, 
       LoginText,
       LoginBtn
     },
