@@ -1,10 +1,10 @@
 <template>
   <div>
-      <LoginTop middletop='注册bilbil'></LoginTop>
+      <LoginTop middletop='sigin'></LoginTop>
       <LoginText label="姓名" style="margin:4.167vw 0" placeholder="请输入姓名" type="text" rule="^.{6,16}$"></LoginText>
       <LoginText label="账号" style="margin:4.167vw 0" placeholder=" 请输入账号" type="text" rule="^.{6,16}$"></LoginText>
       <LoginText label="密码" style="margin:4.167vw 0" placeholder="请输入密码" type="password" rule="^.{6,16}$"></LoginText>
-      <LoginBtn></LoginBtn>
+      <LoginBtn register="注册"></LoginBtn>
   </div>
 </template>
 

@@ -9,11 +9,24 @@
 export default {
     name:'LoginText',
     props:['label','type','placeholder','rule'],
+    methods:{
+        //正则匹配
+        handlerulg(){
+            const rle = new RegExp(this.rule)
+            //将传进来的字符串正则转换成真正的正则表达式
+            console.log(rle)
+        }
+    },
     data() {
         return {
             text:'',
         }
     },
+    watch:{
+        text(){
+            this.handlerulg()
+        }
+    }
 }
 </script>
 

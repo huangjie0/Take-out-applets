@@ -17,8 +17,9 @@ export default {
 <style scoped lang='less'>
 .login_top{
   height: 12.5vw;
-  background-color: white;
+  background-color: #ccba90;
   display: flex;
+  color: white;
   div{
     flex: 1;
     display: flex;
