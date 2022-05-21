@@ -1,9 +1,9 @@
 <template>
   <div>
       <LoginTop middletop='sigin'></LoginTop>
-      <LoginText label="姓名" style="margin:4.167vw 0" placeholder="请输入姓名" type="text" rule="^.{6,16}$"></LoginText>
-      <LoginText label="账号" style="margin:4.167vw 0" placeholder=" 请输入账号" type="text" rule="^.{6,16}$"></LoginText>
-      <LoginText label="密码" style="margin:4.167vw 0" placeholder="请输入密码" type="password" rule="^.{6,16}$"></LoginText>
+      <LoginText label="姓名" @inputChange='successInput_1' style="margin:4.167vw 0" placeholder="请输入姓名" type="text" rule="^.{6,16}$"></LoginText>
+      <LoginText label="账号" @inputChange='successInput_2' style="margin:4.167vw 0" placeholder=" 请输入账号" type="text" rule="^.{6,16}$"></LoginText>
+      <LoginText label="密码" @inputChange='successInput_3' style="margin:4.167vw 0" placeholder="请输入密码" type="password" rule="^.{6,16}$"></LoginText>
       <LoginBtn register="注册"></LoginBtn>
   </div>
 </template>
@@ -22,9 +22,22 @@ export default {
     },
     data() {
       return {
-
+        name:'',
+        username:'',
+        password:''
       }
     },
+    methods:{
+      successInput_1(text){
+        this.name = text
+      },
+      successInput_2(text){
+        this.username = text
+      },
+      successInput_3(text){
+        this.password = text
+      }
+    }
 }
 </script>
 

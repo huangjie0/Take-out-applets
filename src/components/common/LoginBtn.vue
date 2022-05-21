@@ -1,5 +1,5 @@
 <template>
-  <div class="btnparent">
+  <div class="btnparent" @click="registerBtn()">
     <div class="loginbtn">
       {{register}}
     </div>
@@ -9,8 +9,12 @@
 <script>
 export default {
     name:'LoginBtn',
-    props:['register']
-
+    props:['register'],
+    methods:{
+      registerBtn(){
+        this.$emit('registerSubmit')
+      }
+    }
 }
 </script>
 

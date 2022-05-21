@@ -14,7 +14,9 @@ export default {
         handlerulg(){
             const rle = new RegExp(this.rule)
             //将传进来的字符串正则转换成真正的正则表达式
-            console.log(rle)
+            if(rle.test(this.text)){
+                this.$emit('inputChange',this.text)
+            }
         }
     },
     data() {
