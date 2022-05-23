@@ -12,6 +12,7 @@
 import LoginTop from '@/components/common/LoginTop'
 import LoginText from '@/components/common/LoginText.vue'
 import LoginBtn from '@/components/common/LoginBtn.vue'
+import registerpost from '@/api/register/index'
 
 export default {
     name:'Register',
@@ -22,25 +23,31 @@ export default {
     },
     data() {
       return {
-        name:'',
-        username:'',
-        password:''
+        users:{
+          name:'',
+          username:'',
+          password:''
+        }
       }
     },
     methods:{
       registerSubmit(){
-       if(this.name!=='' && this.username!=='' && this.password!==''){
-          console.log('111')
+       if(this.users.name && this.users.username && this.users.password){
+         registerpost(this.users).then(res=>{
+           console.log(res)
+         }).catch(err=>{
+           console.log(err)
+         })
        }
       },
       successInput_1(text){
-        this.name = text
+        this.users.name = text
       },
       successInput_2(text){
-        this.username = text
+        this.users.username = text
       },
       successInput_3(text){
-        this.password = text
+        this.users.password = text
       }
     }
 }
