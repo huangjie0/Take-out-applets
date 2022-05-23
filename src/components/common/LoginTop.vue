@@ -17,9 +17,11 @@ export default {
 <style scoped lang='less'>
 .login_top{
   height: 12.5vw;
-  background-color: #ccba90;
   display: flex;
-  color: white;
+  background-color:#00c160;
+  border-bottom-left-radius: 2.667vw;
+  border-bottom-right-radius: 2.667vw;
+  color: rgb(255, 255, 255);
   div{
     flex: 1;
     display: flex;
